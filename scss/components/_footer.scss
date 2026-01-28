@@ -192,11 +192,6 @@ footer .nav-link {
   
   footer .nav-item {
     flex: 0 0 auto;
-    
-    // Forzar salto de línea después del tercer elemento (Galería)
-    &:nth-child(3) {
-      margin-right: 100%;
-    }
   }
   
   footer .nav-link {
@@ -220,6 +215,20 @@ footer .nav-link {
   
   .text-footer {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 430px) {
+  footer .nav-item {
+    // Forzar salto de línea después del tercer elemento (Galería)
+    &:nth-child(3) {
+      margin-right: 100%;
+    }
+  }
+  
+  footer .nav-link {
+    font-size: 0.9rem;
+    padding: 4px 6px;
   }
 }
 
