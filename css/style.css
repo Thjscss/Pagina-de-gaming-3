@@ -518,20 +518,20 @@ footer .nav-link[aria-current=page] {
 /* Breakpoint a 480px - compactar al máximo manteniendo 5 en fila */
 @media (max-width: 480px) {
   .pie {
-    padding: 30px 8px;
+    padding: 28px 6px;
   }
   footer .navbar-nav {
-    gap: 0.3rem 0.5rem;
+    gap: 0.25rem 0.4rem;
   }
   footer .nav-link {
-    font-size: 0.8rem;
-    padding: 5px 5px;
+    font-size: 0.78rem;
+    padding: 5px 4px;
   }
   .bajopie {
-    margin-left: -8px;
-    margin-right: -8px;
-    padding-left: 8px;
-    padding-right: 8px;
+    margin-left: -6px;
+    margin-right: -6px;
+    padding-left: 6px;
+    padding-right: 6px;
   }
   .formall {
     padding: 0 5px;
@@ -541,29 +541,76 @@ footer .nav-link[aria-current=page] {
     width: 100%;
   }
   .text-footer {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
   }
 }
+/* Breakpoint a 400px - comprimir más manteniendo 5 en fila */
 @media (max-width: 400px) {
   .pie {
-    padding: 25px 15px;
+    padding: 25px 4px;
   }
   footer .navbar-nav {
-    gap: 0.6rem 0.8rem;
+    gap: 0.2rem 0.3rem;
   }
   footer .nav-link {
-    font-size: 0.9rem;
-    padding: 5px 8px;
+    font-size: 0.72rem;
+    padding: 4px 3px;
   }
   .bajopie {
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-left: -4px;
+    margin-right: -4px;
+    padding-left: 4px;
+    padding-right: 4px;
   }
   .formall label,
   .text-footer {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
+  }
+}
+/* Breakpoint a 350px - ultra compacto manteniendo 5 en fila */
+@media (max-width: 350px) {
+  .pie {
+    padding: 22px 2px;
+  }
+  footer .navbar-nav {
+    gap: 0.15rem 0.25rem;
+  }
+  footer .nav-link {
+    font-size: 0.68rem;
+    padding: 4px 2px;
+  }
+  .bajopie {
+    margin-left: -2px;
+    margin-right: -2px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .formall label,
+  .text-footer {
+    font-size: 0.85rem;
+  }
+}
+/* Breakpoint a 320px - mínimo absoluto manteniendo 5 en fila */
+@media (max-width: 320px) {
+  .pie {
+    padding: 20px 1px;
+  }
+  footer .navbar-nav {
+    gap: 0.1rem 0.2rem;
+  }
+  footer .nav-link {
+    font-size: 0.65rem;
+    padding: 3px 2px;
+  }
+  .bajopie {
+    margin-left: -1px;
+    margin-right: -1px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+  .formall label,
+  .text-footer {
+    font-size: 0.82rem;
   }
 }
 /* 2. Definimos la fuente base */
