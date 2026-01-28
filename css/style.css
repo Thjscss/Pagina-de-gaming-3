@@ -439,12 +439,16 @@ footer .nav-link[aria-current=page] {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0.6rem 1rem;
-    max-width: 320px;
+    gap: 0.5rem 0.8rem;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0 10px;
   }
   footer .nav-item {
     flex: 0 0 auto;
+  }
+  footer .nav-item:nth-child(3) {
+    margin-right: 100%;
   }
   footer .nav-link {
     font-size: 0.95rem;
