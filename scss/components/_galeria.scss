@@ -1,0 +1,28 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mixins;
+
+.galeriaimg {
+  @include mixins.gallery-image(240px, 160px);
+  @include mixins.fade-in(.5s);
+  
+  /* Agrega esto para evitar la deformación */
+  object-fit: cover;
+  object-position: center; /* Para que se centre la imagen al recortar */
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+  cursor: pointer;
+  
+  &:hover {
+    transform: scale(1.08) rotateY(2deg);
+    filter: brightness(1.1) drop-shadow(0 8px 16px rgba(15, 157, 88, 0.3));
+  }
+}
+
+.textgalery{
+  color: vars.$text-color;
+  margin: 0%;
+  transition: color 0.3s ease;
+}
+
+figure {
+  animation: fade-in 0.6s ease both;
+}

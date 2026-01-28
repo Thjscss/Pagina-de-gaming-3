@@ -1,0 +1,221 @@
+/*
+ * Blog Gaming - Estilos Principales
+ * Autor: Thomas Miranda
+ * 
+ * @use es el estándar recomendado (reemplaza @import deprecated)
+ */
+
+@use './utils/variables' as vars;
+@use './utils/utility' as utility;
+@use './utils/mixins' as mixins;
+@use './components/navbar';
+@use './components/footer';
+@use '../scss/base/typography';
+@use './components/buttons';
+@use './components/galeria';
+@use './components/cards';
+@use './components/sections';
+
+// ==========================================
+// RESET Y ESTILOS BASE
+// ==========================================
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  
+  // Respetar preferencia de usuario para reducir movimiento
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: vars.$bg-color;
+  color: vars.$text-color;
+  font-family: vars.$font-primary;
+  line-height: vars.$line-height-base;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+// Prevenir scroll horizontal
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+// ==========================================
+// IMÁGENES RESPONSIVE
+// ==========================================
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+}
+
+// Fondo blanco para imágenes de productos
+figure img {
+  background: #ffffff;
+}
+
+// ==========================================
+// ACCESIBILIDAD
+// ==========================================
+
+// Skip link para navegación por teclado
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: vars.$primary-accent;
+  color: vars.$text-color;
+  padding: 8px 16px;
+  z-index: vars.$z-index-tooltip;
+  transition: top vars.$transition-fast;
+  
+  &:focus {
+    top: 0;
+  }
+}
+
+// Clase visually-hidden para screen readers
+.visually-hidden {
+  @include mixins.visually-hidden;
+}
+
+// Focus visible mejorado
+a, button, input, select, textarea, [tabindex]:not([tabindex="-1"]) {
+  @include mixins.focus-visible;
+}
+
+// ==========================================
+// SELECCIÓN DE TEXTO
+// ==========================================
+::selection {
+  background-color: vars.$primary-accent;
+  color: vars.$text-color;
+}
+
+// ==========================================
+// SCROLLBAR PERSONALIZADA
+// ==========================================
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: vars.$bg-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: vars.$primary-accent;
+  border-radius: 5px;
+  
+  &:hover {
+    background: lighten(vars.$primary-accent, 10%);
+  }
+}
+
+// Firefox
+* {
+  scrollbar-width: thin;
+  scrollbar-color: vars.$primary-accent vars.$bg-color;
+}
+
+// ==========================================
+// ANIMACIONES REDUCIDAS
+// ==========================================
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// ==========================================
+// UTILIDADES
+// ==========================================
+
+// Botón volver arriba
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: vars.$primary-accent;
+  color: vars.$text-color;
+  border: none;
+  border-radius: vars.$border-radius-full;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all vars.$transition-normal;
+  z-index: vars.$z-index-sticky;
+  @include mixins.flex-center;
+  
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: vars.$shadow-glow;
+  }
+  
+  &:focus {
+    outline: 2px solid vars.$text-color;
+    outline-offset: 2px;
+  }
+}
+
+// ==========================================
+// RESPONSIVE BREAKPOINTS
+// ==========================================
+
+// Mobile
+@media (max-width: vars.$breakpoint-mobile) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+// Tablet
+@media (min-width: #{vars.$breakpoint-mobile + 1}) and (max-width: vars.$breakpoint-tablet) {
+  html {
+    font-size: 15px;
+  }
+}
+
+// Desktop pequeño
+@media (min-width: #{vars.$breakpoint-tablet + 1}) and (max-width: vars.$breakpoint-desktop) {
+  // Estilos específicos para desktop pequeño
+}
+
+// Desktop grande
+@media (min-width: #{vars.$breakpoint-large}) {
+  .container {
+    max-width: 1320px;
+  }
+}

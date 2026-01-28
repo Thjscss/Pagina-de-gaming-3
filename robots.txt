@@ -1,0 +1,36 @@
+# ROBOTS.TXT - Instrucciones para motores de búsqueda
+# 
+# Este archivo controla cómo Google, Bing y otros buscadores rastrean tu sitio.
+#
+# Estructura básica:
+# User-agent: [qué bot afecta]
+# Allow: [permitir rastrear]
+# Disallow: [bloquear rastreo]
+# Sitemap: [ubicación del mapa de sitio]
+#
+# Por qué importa:
+# - Mejora la eficiencia del rastreo
+# - Protege contenido que no quieres indexado (admin, privado)
+# - Ayuda a Google a encontrar tu sitemap
+# - Optimiza el presupuesto de rastreo (crawl budget)
+
+# PERMITIR A TODOS LOS BOTS rastrear TODO el sitio
+User-agent: *
+Allow: /
+
+# BLOQUEAR ACCESO A CARPETAS PRIVADAS (si las tuvieras)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
+
+# UBICACIÓN DEL SITEMAP (MUY IMPORTANTE PARA SEO)
+# Google busca primero robots.txt, si no lo encuentra aquí lo busca en otra parte
+# La URL debe ser ABSOLUTA (no relativa)
+Sitemap: https://Thjscss.github.io/Pagina-de-gaming-3/sitemap.xml
+
+# COMENTARIOS ADICIONALES SOBRE ESTE SITIO:
+# - El sitio es un blog/tienda de gaming
+# - No hay contenido privado o restringido
+# - Se permite rastreo completo para máxima visibilidad en buscadores
+# - Las imágenes en /img/ son públicas y deben rastrearse
+# - Los CSS y JS en /css/ y /js/ deben rastrearse para renderizado correcto

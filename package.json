@@ -1,0 +1,23 @@
+{
+  "name": "pagina-de-gaming-2",
+  "version": "1.0.0",
+  "description": "Sitio estático - Preentrega 3",
+  "scripts": {
+    "build:sass": "sass scss:css --no-source-map",
+    "watch:sass": "sass --watch scss:css",
+    "optimize:images": "imagemin img/wallpapers/* --out-dir=img/wallpapers/webp --plugin=webp",
+    "build": "npm run build:sass && npm run optimize:images"
+  },
+  "devDependencies": {
+    "imagemin-cli": "^8.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "imagemin-webp": "^7.0.0",
+    "jest": "^30.2.0",
+    "sass": "^1.72.1"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "moment": "^2.30.1"
+  }
+}

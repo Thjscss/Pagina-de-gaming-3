@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<!--
+  PreEntrega1 - Miranda
+  Proyecto: Blog de Gaming
+  Archivo: quienesomos.html
+  Descripción: Página secundaria (banner, nav, imagenes y footer).
+  Autor: Thomas Miranda
+  
+  ACCESIBILIDAD:
+  - Atributos ARIA en elementos interactivos
+  - Estructura semántica con article para contenido principal
+  
+  SEO:
+  - Meta tags sobre el autor y creador
+  - Página de autoridad para branding personal
+  - Open Graph y Twitter Cards
+-->
+
+<head>
+    <!-- Meta Tags Básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Conoce a Thomas Miranda y el equipo de Blog Gaming. Apasionados por los videojuegos, la tecnología y la cultura gamer en Argentina.">
+    <meta name="keywords" content="sobre nosotros, equipo gaming, blog gaming, thomas miranda, acerca de, nuestra historia">
+    <meta name="author" content="Thomas Miranda - Blog Gaming">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Quiénes Somos | Blog Gaming - Nuestra Historia">
+    <meta property="og:description" content="Conoce a Thomas Miranda y el equipo de Blog Gaming. Apasionados por los videojuegos y la tecnología.">
+    <meta property="og:image" content="https://thjscss.github.io/Pagina-de-gaming-3/img/og-image.jpg">
+    <meta property="og:url" content="https://thjscss.github.io/Pagina-de-gaming-3/pages/quienesomos.html">
+    <meta property="og:site_name" content="Blog Gaming">
+    <meta property="og:locale" content="es_AR">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Quiénes Somos | Blog Gaming - Nuestra Historia">
+    <meta name="twitter:description" content="Conoce a Thomas Miranda y el equipo de Blog Gaming.">
+    <meta name="twitter:image" content="https://thjscss.github.io/Pagina-de-gaming-3/img/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://thjscss.github.io/Pagina-de-gaming-3/pages/quienesomos.html">
+    
+    <title>Quiénes Somos | Blog Gaming - Nuestra Historia</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="../img/Logo.jpg">
+    <link rel="apple-touch-icon" href="../img/Logo.jpg">
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="../css/style.css" as="style">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://unpkg.com">
+    
+    <!-- Estilos de la pagina -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-black mt-0" role="navigation" aria-label="Navegación principal">
+            <div class="container-fluid">
+                <button class="navbar-toggler border border-white d-lg-none mt-2" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start text-bg-black" tabindex="-1" id="menuLateral"
+                    aria-labelledby="offcanvasLabel" aria-label="Menú de navegación lateral">
+
+                    <div class="offcanvas-header">
+                        <h2 class="offcanvas-title mx-2 mt-3" id="offcanvasLabel">Menú</h2>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 border border-3 rounded-1">
+                            <button type="button" class=" btn-gaming" data-bs-dismiss="offcanvas" aria-label="Cerrar menú de navegación">
+                                Cerrar Menú
+                            </button>
+                            <li class="nav-item"><a class="nav-link mx-5" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link mx-5" href="productos.html">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link mx-5" href="galeria.html">Galería</a></li>
+                            <li class="nav-item"><a class="nav-link mx-5" href="quienesomos.html">Quiénes
+                                    somos</a></li>
+                            <li class="nav-item"><a class="nav-link mx-5" href="contacto.html">Contacto</a></li>
+                        </ul>
+                        <div>
+                            <picture class="mt-3 border border-3 rounded-1 navbar-nav ">
+                                <img src="../img/barranav/anunciobarra.jpg" class="imgbar rounded-1" alt="Anuncio de productos gaming" aria-hidden="true">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="navbar-brand mx-auto m-0 d-lg-none">Blog gaming</h1>
+            </div>
+            <div class="container-fluid d-none d-lg-flex">
+                <div>
+                    <h1 class="navbar-brand mx-auto m-0 ps-2">Blog gaming</h1>
+                </div>
+                <div class="d-none d-lg-block border-secondary py-2 mx-auto px-2 mt-3">
+                    <ul class="navbar-nav d-flex flex-row justify-content-center gap-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="quienesomos.html">Quiénes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fs-5" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenido" class="container my-5">
+        
+        <section class="text-center mb-5 fade-in" aria-labelledby="esencia-titulo" data-aos="fade-down">
+            <h2 id="esencia-titulo" class="display-4 text-uppercase">Nuestra Esencia</h2>
+            <p class="fs-5 col-md-8 mx-auto">
+                Somos un blog y tienda orientada al gaming en Argentina. Probamos hardware real,
+                compartimos ofertas locales y seleccionamos periféricos que mejoran tu experiencia de juego sin romper el bolsillo.
+            </p>
+        </section>
+
+        <hr class="border-secondary mb-5">
+
+        <section class="row mb-5 g-4" aria-labelledby="mision-vision">
+            <h3 id="mision-vision" class="visually-hidden">Misión y Visión</h3>
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+                <article class="p-4 border border-secondary rounded h-100 bg-dark">
+                    <h3>Misión</h3>
+                    <p>Ayudar a gamers a elegir mejor: comparativas claras, guías honestas y precios actualizados.</p>
+                </article>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                <article class="p-4 border border-secondary rounded h-100 bg-dark">
+                    <h3>Visión</h3>
+                    <p>Ser la referencia local en recomendación de hardware accesible y confiable.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="mb-5" aria-labelledby="valores-titulo">
+            <h3 id="valores-titulo" class="text-center mb-4" data-aos="fade-up">Nuestros Valores</h3>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+                <div class="col" data-aos="flip-left" data-aos-delay="100">
+                    <article class="card h-100 bg-black border-secondary text-white">
+                        <div class="card-body">
+                            <h4 class="card-title text-success">Transparencia</h4>
+                            <p class="card-text small">Reseñas 100% reales y precios claros.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col" data-aos="flip-left" data-aos-delay="200">
+                    <article class="card h-100 bg-black border-secondary text-white">
+                        <div class="card-body">
+                            <h4 class="card-title text-success">Accesibilidad</h4>
+                            <p class="card-text small">Soporte amigable para principiantes.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col" data-aos="flip-left" data-aos-delay="300">
+                    <article class="card h-100 bg-black border-secondary text-white">
+                        <div class="card-body">
+                            <h4 class="card-title text-success">Comunidad</h4>
+                            <p class="card-text small">Escuchamos feedback y mejoramos juntos.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col" data-aos="flip-left" data-aos-delay="400">
+                    <article class="card h-100 bg-black border-secondary text-white">
+                        <div class="card-body">
+                            <h4 class="card-title text-success">Optimización</h4>
+                            <p class="card-text small">FPS reales y calidad/precio.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="row align-items-center mb-5 bg-dark p-4 rounded border border-secondary" aria-labelledby="fundador-titulo" data-aos="fade-up">
+            <div class="col-md-4 text-center">
+                <img src="../img/autor/autor.jpeg" alt="Foto de perfil de Thomas Miranda, fundador de Blog Gaming" class="img-fluid rounded-circle border border-3 border-success mb-3" style="max-width: 200px;" loading="lazy">
+            </div>
+            <div class="col-md-8">
+                <h3 id="fundador-titulo">Thomas Miranda</h3>
+                <h4 class="text-success">Fundador & Tester</h4>
+                <p class="mt-3">
+                    "Fan de los benchmarks y de exprimir el 1080p Ultra con buen precio/rendimiento. 
+                    Comparto configuraciones, ofertas y tips de mantenimiento."
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-5 col-lg-8 mx-auto" aria-labelledby="faq-titulo">
+            <h3 id="faq-titulo" class="text-center mb-4" data-aos="fade-up">Preguntas Frecuentes</h3>
+            <div class="accordion accordion-flush" id="accordionFAQ">
+                
+                <div class="accordion-item bg-black border border-secondary mb-2" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                            ¿Hacen envíos?
+                        </button>
+                    </h4>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <p>Sí, a todo el país mediante correo y motomensajería en Córdoba.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-black border border-secondary mb-2" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="accordion-header">
+                        <button class="accordion-button collapsed bg-black text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                            ¿Qué medios de pago aceptan?
+                        </button>
+                    </h4>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            <p>Efectivo, transferencia y tarjetas con cuotas (según banco y promo vigente).</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+        <!-- El footer  -->
+    <footer class="pie bg-black mt-5" role="contentinfo">
+        <nav aria-label="Navegación del pie de página">
+            <div class="border-secondary py-2 mx-auto px-2">
+                <ul class="navbar-nav d-flex flex-row justify-content-center gap-4 px-2">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="quienesomos.html" aria-current="page">Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="bajopie text-center px-2">
+            <form class="formall" action="#" method="post" novalidate aria-labelledby="newsletter-title">
+                <label for="emailNewsletter" id="newsletter-title" class="text-footer px-2">Suscribite a Blog Gaming para recibir
+                    novedades</label><br>
+                <input id="emailNewsletter" name="email" type="email" autocomplete="email" required
+                    placeholder="tu@email.com" aria-required="true" class="mt-3">
+                <button type="submit" class="btn-gaming mt-3">Suscribirse</button>
+            </form>
+            <p class="mt-3 py-3 text-footer">© 2025 Blog Gaming - Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="../js/script.js" defer></script>
+</body>
+
+</html>

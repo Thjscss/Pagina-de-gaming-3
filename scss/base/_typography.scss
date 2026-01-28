@@ -1,0 +1,65 @@
+/* _typography.scss */
+
+/* 1. Importamos la fuente (Podes cambiar Montserrat por Poppins si te gusta más) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* 2. Definimos la fuente base */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6; /* Un poco de aire para que sea fácil de leer */
+}
+
+/* 3. Títulos con impacto (Estilo Gaming), Párrafos y forms */
+h1, h2, h3, h4, figcaption, span, p, li, summary{
+    font-weight: 700; /* Negrita fuerte */
+    color: #FFFFFF; /* Los títulos sí van en blanco puro para resaltar */
+    margin-bottom: 1rem;
+    text-transform: uppercase; /* Convertimos a mayúsculas para dar fuerza (tipo "BLACK FRIDAY") */
+    letter-spacing: 0.5px; /* Separamos un poquito las letras */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Jerarquía de títulos mejorada */
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    letter-spacing: 0.8px;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #0f9d58;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    letter-spacing: 0.6px;
+    margin-bottom: 1rem;
+    color: #0f9d58;
+}
+
+h4 {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    letter-spacing: 0.5px;
+    margin-bottom: 0.8rem;
+}
+
+p, li {
+    font-weight: 400;
+    text-transform: none;
+    color: #FAFAFA;
+    line-height: 1.8;
+}
+
+/* 5. Estilos para los precios (Muy importante en tu tienda) */
+.price {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 700;
+    color: #0f9d58;
+    text-shadow: 0 0 10px rgba(15, 157, 88, 0.3);
+}

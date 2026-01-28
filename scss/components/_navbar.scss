@@ -1,0 +1,179 @@
+@use '../utils/utility';
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mixins;
+
+header {
+  padding: 0%;
+  height: 6em;
+  ul {
+    list-style: circle;
+  }
+}
+
+nav {
+  background-color: vars.$bg-color-nav;
+  border-bottom: 2px solid vars.$primary-accent;
+  height: 6em;
+  transition: all vars.$transition-normal;
+  position: relative;
+  z-index: vars.$z-index-sticky;
+  
+  // Efecto al hacer scroll
+  &.scrolled {
+    background-color: rgba(28, 28, 28, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* Estilos del botón Hamburguesa Neón */
+.navbar-toggler {
+  background-size: 5em 5em;  
+  /* Reseteamos estilos base de Bootstrap */
+  border: none;
+  padding: 0.5em;
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  border: 0.2em solid vars.$bg-color;
+  background-color: vars.$primary-accent;
+
+
+  /* Quitamos el borde azul al hacer click en móviles */
+  &:focus {
+    box-shadow: none;
+  }
+  /* Aumenta tamaño del icono de bootstrap */
+  .navbar-toggler-icon{
+    background-size: 1.5em 5em;
+  }
+  }
+  .offcanvas{
+    background-color: vars.$bg-color-nav;
+    align-items: center;
+  }
+.nav-link {
+  color: vars.$text-color;
+  font-size: 1.5em;
+  transition: all 0.3s ease;
+  position: relative;
+  border-radius: 4px;
+  
+  /* Efecto hover para enlaces */
+  &:hover {
+    color: vars.$text-color;
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px rgba(15, 157, 88, 0.5);
+  }
+  
+  &:focus {
+    color: vars.$text-color;
+    outline: 2px solid vars.$primary-accent;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  
+  &.active {
+    color: vars.$primary-accent;
+    border-bottom: 2px solid vars.$primary-accent;
+    padding-bottom: 5px;
+    box-shadow: 0 2px 8px rgba(15, 157, 88, 0.3);
+  }
+}
+
+/* Estilos simples para el título del menú desplegable */
+.offcanvas .offcanvas-title {
+  color: vars.$text-color;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid vars.$primary-accent;
+  padding-bottom: 10px;
+}
+
+/* Aumentar tamaño del título en la barra de navegación */
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: vars.$text-color;
+  unicode-bidi: normal;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  
+  /* Evitar cambio de color al pasar el cursor */
+  &:hover {
+    color: vars.$text-color;
+    text-shadow: 0 0 15px rgba(15, 157, 88, 0.6);
+    transform: scale(1.02);
+  }
+  
+  &:focus {
+    outline: 2px solid vars.$primary-accent;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+  
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+.navbar-nav {
+    border-color: vars.$primary-accent;
+}
+
+.imgbar {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+// Indicador de página actual
+.nav-link[aria-current="page"] {
+  color: vars.$primary-accent;
+  border-bottom: 2px solid vars.$primary-accent;
+  font-weight: 600;
+}
+
+@include utility.devices(desktop, laptop, tablet, mobile) {
+  .typo-1 {
+    text-align: center;
+  }
+}
+
+.navbar-collapse {
+  &.show {
+    background-color: transparent;
+    
+    &.collapse {
+      background-color: vars.$bg-color;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  nav .navbar-nav {
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  nav form input {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  
+  nav .form button {
+    width: 80%;
+  }
+  
+  .pie {
+    max-width: 100%;
+    border-top: 2px solid vars.$primary-accent;
+  }
+  
+  .text-nav {
+    color: vars.$text-color;
+    margin-bottom: 0%;
+  }
+}

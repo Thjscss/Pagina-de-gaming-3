@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  SITEMAP.XML - Mapa del sitio para SEO
+  
+  Este archivo le indica a Google y otros motores de búsqueda:
+  1. Qué páginas existen en el sitio
+  2. Cuándo se actualizaron por última vez
+  3. Qué tan importante es cada página (prioridad)
+  4. Con qué frecuencia cambios (para rastreo eficiente)
+  
+  Por qué importa:
+  - Mejora la indexación en Google
+  - Asegura que TODAS tus páginas sean encontradas
+  - Acelera el descubrimiento de nuevas páginas
+  
+-->
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- PÁGINA DE INICIO -->
+  <url>
+    <loc>https://Thjscss.github.io/Pagina-de-gaming-3/index.html</loc>
+    <!-- Última actualización: hoy (siempre actualizar esta fecha) -->
+    <lastmod>2026-01-27</lastmod>
+    <!-- Prioridad 1.0 = la más importante (esta es tu página principal) -->
+    <priority>1.0</priority>
+    <!-- Cambiar diariamente ya que tiene contenido dinámico/promociones -->
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- PÁGINA DE PRODUCTOS -->
+  <url>
+    <loc>https://Thjscss.github.io/Pagina-de-gaming-3/pages/productos.html</loc>
+    <lastmod>2026-01-27</lastmod>
+    <!-- Prioridad 0.9 = muy importante (es donde los usuarios compran) -->
+    <priority>0.9</priority>
+    <!-- Cambiar semanalmente (se agregan/actualizan productos) -->
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- PÁGINA DE GALERÍA -->
+  <url>
+    <loc>https://Thjscss.github.io/Pagina-de-gaming-3/pages/galeria.html</loc>
+    <lastmod>2026-01-27</lastmod>
+    <!-- Prioridad 0.7 = importante para el SEO de imágenes -->
+    <priority>0.7</priority>
+    <!-- Cambiar mensualmente (se agregan fotos de vez en cuando) -->
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- PÁGINA QUIÉNES SOMOS -->
+  <url>
+    <loc>https://Thjscss.github.io/Pagina-de-gaming-3/pages/quienesomos.html</loc>
+    <lastmod>2026-01-27</lastmod>
+    <!-- Prioridad 0.8 = importante para credibilidad y autoridad del sitio -->
+    <priority>0.8</priority>
+    <!-- Cambiar raramente (contenido estático sobre la empresa) -->
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- PÁGINA DE CONTACTO -->
+  <url>
+    <loc>https://Thjscss.github.io/Pagina-de-gaming-3/pages/contacto.html</loc>
+    <lastmod>2026-01-27</lastmod>
+    <!-- Prioridad 0.8 = importante para conversión de usuarios -->
+    <priority>0.8</priority>
+    <!-- Cambiar raramente (no cambia casi nunca) -->
+    <changefreq>yearly</changefreq>
+  </url>
+
+</urlset>

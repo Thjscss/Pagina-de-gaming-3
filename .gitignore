@@ -1,0 +1,22 @@
+# Node
+node_modules/
+
+# SASS
+.sass-cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+
+# Logs
+npm-debug.log*
+*.log
+
+# Generated optimized images
+img/wallpapers/webp/
+
+# Environment
+.env
