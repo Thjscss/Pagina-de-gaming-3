@@ -25,9 +25,10 @@
 .text-footer {
   color: vars.$text-color;
   margin-bottom: 0%;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: none;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
+  font-size: 1.05rem;
 }
 
 /* Formulario de suscripción mejorado */
@@ -38,8 +39,9 @@
   label {
     display: block;
     margin-bottom: 15px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-transform: none;
+    color: vars.$text-color;
   }
 }
 
@@ -126,15 +128,17 @@
 /* Navbar del footer mejorado */
 footer .navbar-nav {
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   
   @media (min-width: 701px) {
-    gap: 0.5rem;
+    gap: 2rem;
   }
 }
 
 footer .nav-link {
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: vars.$text-color;
   transition: color 0.3s ease;
   
   &:hover, &:focus {
@@ -144,6 +148,7 @@ footer .nav-link {
   // Quitar borde verde en página seleccionada del footer
   &[aria-current="page"] {
     border-bottom: none;
+    color: vars.$primary-accent;
   }
 }
 
@@ -159,9 +164,34 @@ footer .nav-link {
 }
 
 /* Media queries para responsive */
+@media (max-width: 991px) {
+  footer .navbar-nav {
+    gap: 1.2rem;
+  }
+  
+  footer .nav-link {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 700px) {
   .pie {
     padding: 30px 15px;
+  }
+  
+  footer .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  footer .nav-link {
+    font-size: 1rem;
+    padding: 5px 0;
+  }
+  
+  .formall {
+    padding: 0 10px;
   }
   
   .formall input {
@@ -173,11 +203,25 @@ footer .nav-link {
     width: 100%;
   }
   
-  footer .navbar-nav {
-    gap: 1rem;
+  .text-footer {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pie {
+    padding: 25px 10px;
   }
   
   footer .nav-link {
+    font-size: 0.95rem;
+  }
+  
+  .formall label {
+    font-size: 0.9rem;
+  }
+  
+  .text-footer {
     font-size: 0.9rem;
   }
 }
